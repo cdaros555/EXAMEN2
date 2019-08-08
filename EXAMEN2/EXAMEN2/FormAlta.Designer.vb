@@ -22,120 +22,132 @@ Partial Class FormAlta
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.btnAltaPlan = New System.Windows.Forms.Button()
+        Me.cbxVendedorAP = New System.Windows.Forms.ComboBox()
+        Me.cbxClienteAP = New System.Windows.Forms.ComboBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.txtImporteCuotaAP = New System.Windows.Forms.TextBox()
+        Me.txtFechaContratoAP = New System.Windows.Forms.TextBox()
+        Me.btnIrGrilla = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
-        'Button2
+        'btnAltaPlan
         '
-        Me.Button2.Location = New System.Drawing.Point(190, 315)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(151, 46)
-        Me.Button2.TabIndex = 21
-        Me.Button2.Text = "ALTA"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnAltaPlan.Location = New System.Drawing.Point(190, 315)
+        Me.btnAltaPlan.Name = "btnAltaPlan"
+        Me.btnAltaPlan.Size = New System.Drawing.Size(151, 46)
+        Me.btnAltaPlan.TabIndex = 21
+        Me.btnAltaPlan.Text = "GRABAR"
+        Me.btnAltaPlan.UseVisualStyleBackColor = True
         '
-        'ComboBox2
+        'cbxVendedorAP
         '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(241, 126)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBox2.TabIndex = 20
+        Me.cbxVendedorAP.FormattingEnabled = True
+        Me.cbxVendedorAP.Location = New System.Drawing.Point(241, 169)
+        Me.cbxVendedorAP.Name = "cbxVendedorAP"
+        Me.cbxVendedorAP.Size = New System.Drawing.Size(121, 21)
+        Me.cbxVendedorAP.TabIndex = 20
         '
-        'ComboBox1
+        'cbxClienteAP
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(241, 251)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBox1.TabIndex = 19
+        Me.cbxClienteAP.FormattingEnabled = True
+        Me.cbxClienteAP.Location = New System.Drawing.Point(241, 207)
+        Me.cbxClienteAP.Name = "cbxClienteAP"
+        Me.cbxClienteAP.Size = New System.Drawing.Size(121, 21)
+        Me.cbxClienteAP.TabIndex = 19
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(124, 251)
+        Me.Label4.Location = New System.Drawing.Point(124, 248)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(45, 13)
+        Me.Label4.Size = New System.Drawing.Size(96, 13)
         Me.Label4.TabIndex = 18
-        Me.Label4.Text = "MARCA"
+        Me.Label4.Text = "IMPORTE CUOTA"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(124, 212)
+        Me.Label3.Location = New System.Drawing.Point(124, 211)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(114, 13)
+        Me.Label3.Size = New System.Drawing.Size(52, 13)
         Me.Label3.TabIndex = 17
-        Me.Label3.Text = "DESCRIPCION_PLAN"
+        Me.Label3.Text = "CLIENTE"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(124, 169)
+        Me.Label2.Location = New System.Drawing.Point(124, 173)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(106, 13)
+        Me.Label2.Size = New System.Drawing.Size(68, 13)
         Me.Label2.TabIndex = 16
-        Me.Label2.Text = "IMPORTE_CUOTAS"
+        Me.Label2.Text = "VENDEDOR"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(124, 134)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(86, 13)
+        Me.Label1.Size = New System.Drawing.Size(105, 13)
         Me.Label1.TabIndex = 15
-        Me.Label1.Text = "CANT. CUOTAS"
+        Me.Label1.Text = "FECHA CONTRATO"
         '
-        'TextBox3
+        'txtImporteCuotaAP
         '
-        Me.TextBox3.Location = New System.Drawing.Point(241, 209)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox3.TabIndex = 14
+        Me.txtImporteCuotaAP.Location = New System.Drawing.Point(241, 245)
+        Me.txtImporteCuotaAP.Name = "txtImporteCuotaAP"
+        Me.txtImporteCuotaAP.Size = New System.Drawing.Size(100, 20)
+        Me.txtImporteCuotaAP.TabIndex = 14
         '
-        'TextBox2
+        'txtFechaContratoAP
         '
-        Me.TextBox2.Location = New System.Drawing.Point(241, 169)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox2.TabIndex = 13
+        Me.txtFechaContratoAP.Location = New System.Drawing.Point(241, 134)
+        Me.txtFechaContratoAP.Name = "txtFechaContratoAP"
+        Me.txtFechaContratoAP.Size = New System.Drawing.Size(100, 20)
+        Me.txtFechaContratoAP.TabIndex = 13
+        '
+        'btnIrGrilla
+        '
+        Me.btnIrGrilla.Location = New System.Drawing.Point(190, 389)
+        Me.btnIrGrilla.Name = "btnIrGrilla"
+        Me.btnIrGrilla.Size = New System.Drawing.Size(151, 46)
+        Me.btnIrGrilla.TabIndex = 22
+        Me.btnIrGrilla.Text = "VER GRILLA"
+        Me.btnIrGrilla.UseVisualStyleBackColor = True
         '
         'FormAlta
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(487, 487)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.ComboBox2)
-        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.btnIrGrilla)
+        Me.Controls.Add(Me.btnAltaPlan)
+        Me.Controls.Add(Me.cbxVendedorAP)
+        Me.Controls.Add(Me.cbxClienteAP)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.txtImporteCuotaAP)
+        Me.Controls.Add(Me.txtFechaContratoAP)
         Me.Name = "FormAlta"
-        Me.Text = "Form1"
+        Me.Text = "Alta Plan"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents Button2 As Button
-    Friend WithEvents ComboBox2 As ComboBox
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents btnAltaPlan As Button
+    Friend WithEvents cbxVendedorAP As ComboBox
+    Friend WithEvents cbxClienteAP As ComboBox
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents txtImporteCuotaAP As TextBox
+    Friend WithEvents txtFechaContratoAP As TextBox
+    Friend WithEvents btnIrGrilla As Button
 End Class
