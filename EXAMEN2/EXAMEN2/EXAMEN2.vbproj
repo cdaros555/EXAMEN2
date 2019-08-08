@@ -72,11 +72,20 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.vb">
+    <Compile Include="ClaseAlta.vb" />
+    <Compile Include="ClaseAltaMetodos.vb" />
+    <Compile Include="ClaseConexion.vb" />
+    <Compile Include="FormAlta.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="FormAlta.Designer.vb">
+      <DependentUpon>FormAlta.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormListar.Designer.vb">
+      <DependentUpon>FormListar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormListar.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -96,8 +105,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <EmbeddedResource Include="FormAlta.resx">
+      <DependentUpon>FormAlta.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormListar.resx">
+      <DependentUpon>FormListar.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
