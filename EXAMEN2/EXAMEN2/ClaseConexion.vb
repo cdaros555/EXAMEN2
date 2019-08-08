@@ -1,9 +1,9 @@
 ﻿Imports System.Data.SqlClient
 Imports System.Data.Sql
 
-Public Class conexion
+Public Class ClaseConexion
 
-    Public Function abrir() As SqlConnection
+    Public Function AbrirConexion() As SqlConnection
         Dim con As String
         Dim scon As New SqlConnection
         'con = Settings.miCon
@@ -16,6 +16,14 @@ Public Class conexion
         Return scon
     End Function
 
+    Public Function CerrarConexion() As SqlConnection
+        Dim con As String
+        Dim scon As New SqlConnection
+        con = "Data Source=NBCORAR209;Initial Catalog=EXAMEN;Integrated Security=True"
+        scon = New SqlConnection(con)
+        scon.Close()
+        Return scon
+    End Function
 
 End Class
 

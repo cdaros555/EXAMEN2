@@ -32,6 +32,8 @@ Partial Class FormAlta
         Me.txtImporteCuotaAP = New System.Windows.Forms.TextBox()
         Me.txtFechaContratoAP = New System.Windows.Forms.TextBox()
         Me.btnIrGrilla = New System.Windows.Forms.Button()
+        Me.cbxPlanAP = New System.Windows.Forms.ComboBox()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'btnAltaPlan
@@ -48,7 +50,7 @@ Partial Class FormAlta
         Me.cbxVendedorAP.FormattingEnabled = True
         Me.cbxVendedorAP.Location = New System.Drawing.Point(241, 169)
         Me.cbxVendedorAP.Name = "cbxVendedorAP"
-        Me.cbxVendedorAP.Size = New System.Drawing.Size(121, 21)
+        Me.cbxVendedorAP.Size = New System.Drawing.Size(154, 21)
         Me.cbxVendedorAP.TabIndex = 20
         '
         'cbxClienteAP
@@ -56,13 +58,13 @@ Partial Class FormAlta
         Me.cbxClienteAP.FormattingEnabled = True
         Me.cbxClienteAP.Location = New System.Drawing.Point(241, 207)
         Me.cbxClienteAP.Name = "cbxClienteAP"
-        Me.cbxClienteAP.Size = New System.Drawing.Size(121, 21)
+        Me.cbxClienteAP.Size = New System.Drawing.Size(154, 21)
         Me.cbxClienteAP.TabIndex = 19
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(124, 248)
+        Me.Label4.Location = New System.Drawing.Point(124, 277)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(96, 13)
         Me.Label4.TabIndex = 18
@@ -97,7 +99,7 @@ Partial Class FormAlta
         '
         'txtImporteCuotaAP
         '
-        Me.txtImporteCuotaAP.Location = New System.Drawing.Point(241, 245)
+        Me.txtImporteCuotaAP.Location = New System.Drawing.Point(241, 274)
         Me.txtImporteCuotaAP.Name = "txtImporteCuotaAP"
         Me.txtImporteCuotaAP.Size = New System.Drawing.Size(100, 20)
         Me.txtImporteCuotaAP.TabIndex = 14
@@ -118,11 +120,30 @@ Partial Class FormAlta
         Me.btnIrGrilla.Text = "VER GRILLA"
         Me.btnIrGrilla.UseVisualStyleBackColor = True
         '
+        'cbxPlanAP
+        '
+        Me.cbxPlanAP.FormattingEnabled = True
+        Me.cbxPlanAP.Location = New System.Drawing.Point(241, 240)
+        Me.cbxPlanAP.Name = "cbxPlanAP"
+        Me.cbxPlanAP.Size = New System.Drawing.Size(154, 21)
+        Me.cbxPlanAP.TabIndex = 24
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(124, 244)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(35, 13)
+        Me.Label5.TabIndex = 23
+        Me.Label5.Text = "PLAN"
+        '
         'FormAlta
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(487, 487)
+        Me.Controls.Add(Me.cbxPlanAP)
+        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.btnIrGrilla)
         Me.Controls.Add(Me.btnAltaPlan)
         Me.Controls.Add(Me.cbxVendedorAP)
@@ -150,4 +171,6 @@ Partial Class FormAlta
     Friend WithEvents txtImporteCuotaAP As TextBox
     Friend WithEvents txtFechaContratoAP As TextBox
     Friend WithEvents btnIrGrilla As Button
+    Friend WithEvents cbxPlanAP As ComboBox
+    Friend WithEvents Label5 As Label
 End Class
