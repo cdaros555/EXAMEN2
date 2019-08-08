@@ -22,30 +22,42 @@ Partial Class FormListar
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.dtv = New System.Windows.Forms.DataGridView()
+        Me.btnIrAltaPlan = New System.Windows.Forms.Button()
+        CType(Me.dtv, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'DataGridView1
+        'dtv
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(12, 58)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(598, 501)
-        Me.DataGridView1.TabIndex = 1
+        Me.dtv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dtv.Location = New System.Drawing.Point(12, 58)
+        Me.dtv.Name = "dtv"
+        Me.dtv.Size = New System.Drawing.Size(598, 501)
+        Me.dtv.TabIndex = 1
+        '
+        'btnIrAltaPlan
+        '
+        Me.btnIrAltaPlan.Location = New System.Drawing.Point(229, 601)
+        Me.btnIrAltaPlan.Name = "btnIrAltaPlan"
+        Me.btnIrAltaPlan.Size = New System.Drawing.Size(151, 46)
+        Me.btnIrAltaPlan.TabIndex = 22
+        Me.btnIrAltaPlan.Text = "IR ALTA PLAN"
+        Me.btnIrAltaPlan.UseVisualStyleBackColor = True
         '
         'FormListar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(635, 698)
-        Me.Controls.Add(Me.DataGridView1)
+        Me.Controls.Add(Me.btnIrAltaPlan)
+        Me.Controls.Add(Me.dtv)
         Me.Name = "FormListar"
-        Me.Text = "FormListar"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Text = "Listar"
+        CType(Me.dtv, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents dtv As DataGridView
+    Friend WithEvents btnIrAltaPlan As Button
 End Class
