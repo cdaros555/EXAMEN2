@@ -152,6 +152,7 @@ Partial Class FormAlta
         '
         Me.txtImporteCtaAP.Location = New System.Drawing.Point(233, 264)
         Me.txtImporteCtaAP.Name = "txtImporteCtaAP"
+        Me.txtImporteCtaAP.ReadOnly = True
         Me.txtImporteCtaAP.Size = New System.Drawing.Size(74, 20)
         Me.txtImporteCtaAP.TabIndex = 26
         '
@@ -177,6 +178,7 @@ Partial Class FormAlta
         '
         Me.txtDescripcionAP.Location = New System.Drawing.Point(233, 301)
         Me.txtDescripcionAP.Name = "txtDescripcionAP"
+        Me.txtDescripcionAP.ReadOnly = True
         Me.txtDescripcionAP.Size = New System.Drawing.Size(154, 20)
         Me.txtDescripcionAP.TabIndex = 28
         '
@@ -202,6 +204,7 @@ Partial Class FormAlta
         '
         Me.txtPrecioAP.Location = New System.Drawing.Point(233, 200)
         Me.txtPrecioAP.Name = "txtPrecioAP"
+        Me.txtPrecioAP.ReadOnly = True
         Me.txtPrecioAP.Size = New System.Drawing.Size(100, 20)
         Me.txtPrecioAP.TabIndex = 32
         '
