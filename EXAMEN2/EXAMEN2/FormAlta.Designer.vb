@@ -28,14 +28,11 @@ Partial Class FormAlta
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.txtFechaContratoAP = New System.Windows.Forms.TextBox()
         Me.btnIrGrilla = New System.Windows.Forms.Button()
         Me.cbxCantCuotasPlanAP = New System.Windows.Forms.ComboBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.txtImporteCtaAP = New System.Windows.Forms.TextBox()
-        Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.txtDescripcionAP = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
@@ -97,22 +94,6 @@ Partial Class FormAlta
         Me.Label2.TabIndex = 16
         Me.Label2.Text = "VENDEDOR"
         '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(113, 25)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(105, 13)
-        Me.Label1.TabIndex = 15
-        Me.Label1.Text = "FECHA CONTRATO"
-        '
-        'txtFechaContratoAP
-        '
-        Me.txtFechaContratoAP.Location = New System.Drawing.Point(231, 25)
-        Me.txtFechaContratoAP.Name = "txtFechaContratoAP"
-        Me.txtFechaContratoAP.Size = New System.Drawing.Size(100, 20)
-        Me.txtFechaContratoAP.TabIndex = 13
-        '
         'btnIrGrilla
         '
         Me.btnIrGrilla.Location = New System.Drawing.Point(182, 445)
@@ -155,15 +136,6 @@ Partial Class FormAlta
         Me.txtImporteCtaAP.ReadOnly = True
         Me.txtImporteCtaAP.Size = New System.Drawing.Size(74, 20)
         Me.txtImporteCtaAP.TabIndex = 26
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(220, 268)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(13, 13)
-        Me.Label7.TabIndex = 27
-        Me.Label7.Text = "$"
         '
         'Label8
         '
@@ -228,7 +200,7 @@ Partial Class FormAlta
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(487, 539)
+        Me.ClientSize = New System.Drawing.Size(518, 554)
         Me.Controls.Add(Me.cbxMarcaAP)
         Me.Controls.Add(Me.cbxModeloAP)
         Me.Controls.Add(Me.Label10)
@@ -236,7 +208,6 @@ Partial Class FormAlta
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.txtDescripcionAP)
-        Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.txtImporteCtaAP)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.cbxCantCuotasPlanAP)
@@ -248,8 +219,6 @@ Partial Class FormAlta
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.txtFechaContratoAP)
         Me.Name = "FormAlta"
         Me.Text = "Alta Plan"
         Me.ResumeLayout(False)
@@ -263,14 +232,11 @@ Partial Class FormAlta
     Friend WithEvents Label4 As Label
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents Label1 As Label
-    Friend WithEvents txtFechaContratoAP As TextBox
     Friend WithEvents btnIrGrilla As Button
     Friend WithEvents cbxCantCuotasPlanAP As ComboBox
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents txtImporteCtaAP As TextBox
-    Friend WithEvents Label7 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents txtDescripcionAP As TextBox
     Friend WithEvents Label9 As Label

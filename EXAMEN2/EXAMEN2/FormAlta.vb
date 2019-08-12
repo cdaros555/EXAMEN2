@@ -10,6 +10,7 @@ Public Class FormAlta
     Dim Ds As New DataSet
     Dim drd As SqlDataReader
     Dim IDVEHICULO, IDPLAN As Integer
+
     Private Sub cbxClienteAP_SelectedValueChanged(sender As Object, e As EventArgs)
         Dim cod As String = cbxClienteAP.SelectedValue.ToString 'aca voy a guardar los valores del valueMember del combo Pais (VAL para convertirlo a numero previo al string)
         With Cmd
@@ -31,7 +32,36 @@ Public Class FormAlta
 
 
     Private Sub btnAltaPlan_Click(sender As Object, e As EventArgs) Handles btnAltaPlan.Click
-        '   Dim fecha_actual As Date
+        Dim fecha_actual As Date
+        conn.AbrirConexion()
+        If Verifica_Datos() = False Then Exit Sub   '
+        ' MessageBox.Show("Los datos han sido guardados", "Ayudita", MessageBoxButtons.OK, MessageBoxIcon)
+
+        Try
+            If Me.ValidateChildren Then
+                ' conn.AbrirConexion()
+                alta = New ClaseAlta()
+                Dim resp As Integer
+                fecha_actual = DateTime.Today
+
+                resp = MessageBox.Show("Confirma el alta del Plan...?", "Alta Plan", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+                If resp = vbYes Then
+                    alta._vendedor = cbxVendedorAP.SelectedValue
+                    alta._cliente = cbxClienteAP.SelectedValue
+                    alta._fecha_contrato = fecha_actual
+                    alta._id_tipo_plan = IDPLAN
+                    alta._importe_cuotas = cbxCantCuotasPlanAP.SelectedValue
+
+                    altamet.grabarPlan(alta)
+                    'LimpiarCampos()
+                Else
+                    MessageBox.Show("Verifique los campos marcados")
+                End If
+            End If
+        Catch ex As Exception
+            '   MsgBox(ex.Message)
+        End Try
+
     End Sub
 
     Private Sub cbxMarcaAP_SelectedValueChanged(sender As Object, e As EventArgs) Handles cbxMarcaAP.SelectedValueChanged
@@ -69,7 +99,7 @@ Public Class FormAlta
 
                 With Cmd
                     .CommandType = CommandType.Text
-                    .CommandText = "Select PRECIO,ID From VEHICULOS  where MODELO = '" & cod & "'"
+                    .CommandText = "Select concat('$',PRECIO) PRECIO,ID From VEHICULOS  where MODELO = '" & cod & "'"
                     .Connection = conn.AbrirConexion
                 End With
                 Da.SelectCommand = Cmd
@@ -82,7 +112,7 @@ Public Class FormAlta
                 End If
                 With Cmd
                     .CommandType = CommandType.Text
-                    .CommandText = "Select CANTIDAD_CUOTAS,IMPORTE_CUOTAS,ID From TIPO_PLAN  where ID_VEHICULOS= '" & IDVEHICULO & "'"
+                    .CommandText = "Select CANTIDAD_CUOTAS,concat('$',IMPORTE_CUOTAS) IMPORTE_CUOTAS,ID From TIPO_PLAN  where ID_VEHICULOS= '" & IDVEHICULO & "'"
                     .Connection = conn.AbrirConexion
                 End With
                 Da.SelectCommand = Cmd
@@ -134,7 +164,7 @@ Public Class FormAlta
 
                 With Cmd
                     .CommandType = CommandType.Text
-                    .CommandText = "Select IMPORTE_CUOTAS,DESCRIPCION_PLAN,ID From TIPO_PLAN  where ID= '" & cod & "'"
+                    .CommandText = "Select concat('$',IMPORTE_CUOTAS) IMPORTE_CUOTAS,DESCRIPCION_PLAN,ID From TIPO_PLAN  where ID= '" & cod & "'"
                     .Connection = conn.AbrirConexion
                 End With
                 Da.SelectCommand = Cmd
@@ -152,6 +182,11 @@ Public Class FormAlta
         End Try
     End Sub
 
+    Private Sub btnIrGrilla_Click(sender As Object, e As EventArgs) Handles btnIrGrilla.Click
+        Me.Hide()
+        FormListar.Show()
+    End Sub
+
     Private Sub FormAlta_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Cargo_Combo_Vendedor()
         Cargo_Combo_Cliente()
@@ -159,11 +194,6 @@ Public Class FormAlta
         Cargo_Combo_TipoPlan()
         '     Cargo_Combo_Cuotas()
     End Sub
-
-    Private Sub cbxModeloAP_SelectedIndexChanged(sender As Object, e As EventArgs)
-
-    End Sub
-
 
 
     Public Sub Cargo_Combo_Vendedor()
@@ -267,4 +297,15 @@ Public Class FormAlta
 
         End With
     End Sub
+
+    Private Function Verifica_Datos() As Boolean
+        If Len(cbxCantCuotasPlanAP.Text.Trim) = 0 Then MsgBox("Seleccione Cant. Cuotas", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "Ayuda") : cbxCantCuotasPlanAP.Focus() : Exit Function
+        If Len(cbxClienteAP.Text.Trim) = 0 Then MsgBox("Seleccione Cliente", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "Ayuda") : cbxClienteAP.Focus() : Exit Function
+        If Len(cbxMarcaAP.Text.Trim) = 0 Then MsgBox("Seleccione Marca", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "Ayuda") : cbxMarcaAP.Focus() : Exit Function
+        If Len(cbxModeloAP.Text.Trim) = 0 Then MsgBox("Seleccione Modelo", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "Ayuda") : cbxModeloAP.Focus() : Exit Function
+        If Len(txtImporteCtaAP.Text.Trim) = 0 Then MsgBox("Seleccione Importe", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "Ayuda") : txtImporteCtaAP.Focus() : Exit Function
+        If Len(txtPrecioAP.Text.Trim) = 0 Then MsgBox("Seleccione Precio", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "Ayuda") : txtPrecioAP.Focus() : Exit Function
+
+        Return True
+    End Function
 End Class
